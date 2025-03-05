@@ -1,0 +1,60 @@
+#primer ploblema
+print ("problema No.1")
+entrada1 = "Python es un lenguaje poderoso"
+palabras1 = entrada1.split()
+palabras_extraidas1 = [palabras1[0], palabras1[4]]
+print(palabras1)
+print(palabras_extraidas1)
+
+
+
+#segundo problema
+print ("problema No.2")
+entrada2 = "Hola   mundo   en   Python"
+palabras2 = entrada2.split() 
+texto_completo2 =" ".join(palabras2)
+print(entrada2)
+print(texto_completo2)
+
+
+#tercer problema
+print ("problema No.3")
+entrada3 = "usuario@gmail.com"
+salida3 = entrada3.split("@")
+salida_palabra3 = [salida3[1]]
+print(entrada3)
+print(salida_palabra3)
+
+#cuarto plroblema
+print ("problema No.4")
+entrada4 = "documento.pdf"
+salida4 = entrada4.split(".")
+verificacion = [salida4[1]]
+print(entrada4)
+if(salida4[1] == "pdf"):
+    print ("true")
+else:
+    print ("false")
+
+
+#quinto plroblema
+print ("problema No.5")
+entrada5 = "Me gusta Python"
+salida5 = entrada5.split()
+palabras_invertidas = salida5[::-1]
+oracion_invertida = ' '.join(palabras_invertidas)
+print(entrada5)
+print(oracion_invertida)
+
+
+
+#quinto plroblema
+print ("problema No.6")
+entrada6 = input("ingrese la palabra alegria o tristeza: ")
+minuscula = entrada6.lower()
+if (minuscula == "tristeza" ):
+    print ("No hay peor tristeza que recordar la felicidad en un día de dolor")
+elif (minuscula == "alegria"):
+    print ("La alegría de ver y entender es el más perfecto don de la naturaleza") 
+else:
+    print ("no cumple")
