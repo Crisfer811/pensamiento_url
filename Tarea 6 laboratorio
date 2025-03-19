@@ -23,7 +23,7 @@ while True:
             break
     else:
         saldo -= monto
-        print(f"Retiro exitoso. Nuevo saldo: Q{saldo}")
+        print("Retiro exitoso. Nuevo saldo: Q",saldo)
         intentos = 0  
 
         if saldo == 0:
