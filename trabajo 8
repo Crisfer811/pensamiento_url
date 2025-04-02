@@ -1,0 +1,62 @@
+print ("ejercicio 1")
+tamaño = int(input("Ingrese el tamaño del array: "))
+numero_base = int(input("ingrese el numero base: "))
+arreglo_numero = []
+for i in range (tamaño):
+    arreglo_numero.append(numero_base * (i + 1)) 
+print (arreglo_numero)
+
+print("ejercicio 2")
+tamaño = int(input("ingrese el tamaño del array: "))
+nombre = []
+longitud = []
+for i in range (tamaño):
+    nombres = input("ingrese el nombre: ")
+    nombre.append(nombres)
+    longitud.append(len(nombres))
+print (nombre)
+print (longitud)
+
+print("escenario 2")
+n = int(input("Ingrese el número de clientes encuestados: "))
+respuestas = []
+print("Ingrese las evaluaciones (1=Malo, 2=Regular, 3=Buena, 4=Muy Buena, 5=Excelente): ")
+for i in range (n):
+    while True:
+        valor = int(input("Cliente: "))
+        if 1 <= valor <= 5:
+            respuestas.append(valor)
+            break
+        else:
+            print("Ingrese un número válido entre 1 y 5.")
+        
+conteo = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0}
+for r in respuestas:
+    conteo[r] += 1
+
+print("--- Resultados ---")
+print("A) Total de respuestas por tipo: ")
+print(" Excelente (5): ", conteo[5])
+print(" Muy Buena (4): ", conteo[4])
+print(" Buena (3): ", conteo[3])
+print(" Regular (2): ", conteo[2])
+print(" Malo (1): ", conteo[1])
+
+mas_frecuente = max(conteo, key=conteo.get)
+print("B) Respuesta más frecuente: ", mas_frecuente)
+promedio = sum(respuestas) / n
+clientes_menor_promedio = [i + 1 for i, r in enumerate(respuestas) if r < promedio]
+porcentaje_menor_promedio = (len(clientes_menor_promedio) / n) * 100
+
+print("c) Promedio de respuestas: ", promedio)
+print(f" Porcentaje de clientes con respuesta menor al promedio: ",porcentaje_menor_promedio,"%")
+print(" Clientes con respuestas menores al promedio: ", clientes_menor_promedio)
+
+
+
+
+
+
+
+
+
