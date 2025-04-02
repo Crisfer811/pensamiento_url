@@ -49,7 +49,7 @@ clientes_menor_promedio = [i + 1 for i, r in enumerate(respuestas) if r < promed
 porcentaje_menor_promedio = (len(clientes_menor_promedio) / n) * 100
 
 print("c) Promedio de respuestas: ", promedio)
-print(f" Porcentaje de clientes con respuesta menor al promedio: ",porcentaje_menor_promedio,"%")
+print(" Porcentaje de clientes con respuesta menor al promedio: ", porcentaje_menor_promedio,"%")
 print(" Clientes con respuestas menores al promedio: ", clientes_menor_promedio)
 
 
